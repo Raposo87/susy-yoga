@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pranavida Yoga - Susy Santos</title>
+
+  <!-- Fonte Google (opcional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Cabeçalho / Menu -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">
+        <!-- Troque o src pelo seu arquivo de logo -->
+        <img src="logo-pranavida.png" alt="Pranavida Yoga" />
+        <span>Pranavida<br><small>Yoga e Meditação</small></span>
+      </div>
+
+      <button class="nav-toggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#modalidades">Modalidades</a></li>
+          <li><a href="#planos">Planos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO / INÍCIO -->
+  <section id="inicio" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <p class="hero-tag">Bem-vindo(a) à comunidade</p>
+        <h1>Pranavida Yoga</h1>
+        <p class="hero-subtitle">
+          Meu nome é <strong>Susy Santos</strong>, instrutora de Yoga, Meditação e Respiração consciente.
+          Aqui você encontra um espaço acolhedor para buscar paz, bem-estar e equilíbrio em meio à rotina agitada.
+        </p>
+        <p class="hero-subtitle">
+          Junte-se a mim e vamos caminhar juntos na sua jornada de transformação.
+        </p>
+        <div class="hero-actions">
+          <a href="#planos" class="btn btn-primary">Ver planos</a>
+          <a href="#contato" class="btn btn-outline">Agendar uma aula</a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <!-- Troque o src pela sua foto de yoga -->
+        <img src="susy-hero.png" alt="Instrutora de Yoga em posição de meditação" />
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="section">
+    <div class="container sobre-inner">
+      <div class="sobre-text">
+        <h2>Sobre a Pranavida</h2>
+        <p>
+          A <strong>Pranavida Yoga</strong> é mais do que um espaço online de aulas.
+          É uma comunidade unida por um propósito comum: encontrar serenidade interior,
+          bem-estar e autoconhecimento por meio de práticas de Yoga, Meditação e Respiração consciente.
+        </p>
+        <p>
+          Em cada aula, compartilho meu conhecimento e minha paixão para adaptar a prática às
+          suas necessidades, respeitando seu corpo, seu tempo e sua história.
+        </p>
+        <p>
+          Meu compromisso é criar um ambiente inclusivo, acolhedor e seguro, no qual pessoas
+          de diferentes origens, estilos de vida e níveis de experiência possam se conectar,
+          evoluir e se apoiar mutuamente.
+        </p>
+      </div>
+
+      <div class="sobre-card">
+        <h3>Quem sou eu</h3>
+        <p>
+          Sou <strong>Susy Santos</strong>, instrutora de Yoga, Meditação e Respiração consciente.
+          Acredito que, através de práticas simples e consistentes, podemos trazer mais presença,
+          leveza e equilíbrio para o dia a dia.
+        </p>
+        <p>
+          Vamos trilhar esse caminho juntas(os)?
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODALIDADES -->
+  <section id="modalidades" class="section section-alt">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Modalidades</h2>
+        <p>Escolha o estilo de prática que melhor se adapta ao seu momento.</p>
+      </div>
+
+      <div class="grid modalidades-grid">
+        <article class="card modalidade">
+          <h3>Vinyasa Yoga</h3>
+          <p>
+            Prática dinâmica que conecta movimento e respiração, ajudando a fortalecer
+            o corpo, aumentar a flexibilidade, o equilíbrio e a consciência corporal.
+          </p>
+        </article>
+
+        <article class="card modalidade">
+          <h3>Técnicas de Respiração</h3>
+          <p>
+            Pranayamas e exercícios de respiração consciente que acalmam a mente,
+            aumentam a energia e melhoram a clareza mental.
+          </p>
+        </article>
+
+        <article class="card modalidade">
+          <h3>Meditação</h3>
+          <p>
+            Práticas guiadas para direcionar a atenção, reduzir o estresse,
+            encontrar tranquilidade e cultivar equilíbrio emocional.
+            Ao final de cada aula, sempre há um momento para meditar.
+          </p>
+        </article>
+
+        <article class="card modalidade">
+          <h3>Yoga Restaurativo</h3>
+          <p>
+            Posturas suaves e prolongadas, combinadas com respiração e meditação,
+            que proporcionam relaxamento profundo, rejuvenescimento e alívio do estresse.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANOS / TABELA DE PREÇOS -->
+  <section id="planos" class="section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Planos & Investimento</h2>
+        <p>Escolha o formato que faz sentido para você, no seu país.</p>
+      </div>
+
+      <div class="planos-toggle">
+        <button class="btn-toggle active" data-country="pt">Portugal / Europa (€)</button>
+        <button class="btn-toggle" data-country="br">Brasil (R$)</button>
+      </div>
+
+      <!-- Planos Portugal -->
+      <div class="planos-conteudo active" id="planos-pt">
+        <h3>Online (grupo ou individual)</h3>
+        <div class="grid planos-grid">
+          <div class="card plano">
+            <h4>Aula avulsa</h4>
+            <p class="plano-preco">20€</p>
+            <p class="plano-desc">Perfeito para experimentar a prática ou ter um encontro pontual.</p>
+          </div>
+          <div class="card plano">
+            <h4>Pack 4 aulas</h4>
+            <p class="plano-preco">60€</p>
+            <p class="plano-desc">Encontros regulares para iniciar uma rotina de cuidado.</p>
+          </div>
+          <div class="card plano">
+            <h4>Pack 8 aulas</h4>
+            <p class="plano-preco">100€</p>
+            <p class="plano-desc">Para quem deseja se comprometer com a prática ao longo do mês.</p>
+          </div>
+        </div>
+
+        <div class="planos-extra">
+          <h3>Presenciais (particular)</h3>
+          <p class="plano-preco">35€ / hora (até 10km)</p>
+          <p>Data e local a combinar.</p>
+
+          <h4>Formas de pagamento</h4>
+          <ul>
+            <li>MB Way</li>
+            <li>Transferência bancária</li>
+            <li>Dinheiro</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Planos Brasil -->
+      <div class="planos-conteudo" id="planos-br">
+        <h3>Online (grupo ou individual)</h3>
+        <div class="grid planos-grid">
+          <div class="card plano">
+            <h4>Aula avulsa</h4>
+            <p class="plano-preco">R$ 106</p>
+            <p class="plano-desc">Para sentir a energia da prática antes de fechar um pacote.</p>
+          </div>
+          <div class="card plano">
+            <h4>Pacote semanal</h4>
+            <p class="plano-preco">R$ 320</p>
+            <p class="plano-desc">2 aulas por semana para manter o corpo e a mente em movimento.</p>
+          </div>
+          <div class="card plano">
+            <h4>Pacote mensal</h4>
+            <p class="plano-preco">R$ 530</p>
+            <p class="plano-desc">2 aulas por semana durante o mês, ideal para criar hábito.</p>
+          </div>
+        </div>
+
+        <div class="planos-extra">
+          <h4>Forma de pagamento</h4>
+          <ul>
+            <li>Pix</li>
+          </ul>
+          <p>Data e horário das aulas a combinar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="section section-alt">
+    <div class="container contato-inner">
+      <div class="contato-info">
+        <h2>Entre em contato</h2>
+        <p>
+          Fique à vontade para falar comigo pelo formulário, Instagram ou e-mail.
+          Vou adorar te ajudar a encontrar a melhor forma de iniciar ou aprofundar sua prática.
+        </p>
+        <ul class="contato-lista">
+          <li><strong>Instagram:</strong> <a href="https://www.instagram.com/pranavida.yoga" target="_blank">@pranavida.yoga</a></li>
+          <li><strong>E-mail:</strong> <a href="mailto:pranavidaa@gmail.com">pranavidaa@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <form id="contato-form" class="contato-form">
+        <h3>Envie uma mensagem</h3>
+        <label>
+          Nome
+          <input type="text" name="nome" required placeholder="Seu nome" />
+        </label>
+        <label>
+          E-mail
+          <input type="email" name="email" required placeholder="seuemail@exemplo.com" />
+        </label>
+        <label>
+          Assunto
+          <input type="text" name="assunto" placeholder="Aula experimental, dúvidas, etc." />
+        </label>
+        <label>
+          Mensagem
+          <textarea name="mensagem" rows="4" required placeholder="Como posso te ajudar?"></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary">Enviar mensagem</button>
+        <p class="contato-feedback" id="contato-feedback" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <img src="logo-pranavida-branco.png" alt="Pranavida Yoga logo" />
+        <span>Pranavida Yoga & Meditação</span>
+      </div>
+      <p>© <span id="ano-atual"></span> Pranavida Yoga · Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
