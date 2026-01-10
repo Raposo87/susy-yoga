@@ -37,30 +37,29 @@
   </header>
 
   <!-- HERO / INÍCIO -->
-  <section id="inicio" class="hero">
-    <div class="container hero-inner">
-      <div class="hero-text">
-        <p class="hero-tag">Bem-vindo(a) à comunidade</p>
-        <h1>Pranavida Yoga</h1>
-        <p class="hero-subtitle">
-          Meu nome é <strong>Susy Santos</strong>, instrutora de Yoga, Meditação e Respiração consciente.
-          Aqui você encontra um espaço acolhedor para buscar paz, bem-estar e equilíbrio em meio à rotina agitada.
-        </p>
-        <p class="hero-subtitle">
-          Junte-se a mim e vamos caminhar juntos na sua jornada de transformação.
-        </p>
-        <div class="hero-actions">
-          <a href="#planos" class="btn btn-primary">Ver planos</a>
-          <a href="#contato" class="btn btn-outline">Agendar uma aula</a>
-        </div>
-      </div>
-
-      <div class="hero-image">
-        <!-- Troque o src pela sua foto de yoga -->
-        <img src="yoga1.jpeg" alt="Instrutora de Yoga em posição de meditação" />
+ <section id="inicio" class="hero">
+  <div class="hero-bg">
+    <img src="yoga1.jpeg" alt="Instrutora de Yoga">
+  </div>
+  
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <p class="hero-tag">Bem-vindo(a) à comunidade</p>
+      <h1>Pranavida Yoga</h1>
+      <p class="hero-subtitle">
+        Meu nome é <strong>Susy Santos</strong>, instrutora de Yoga, Meditação e Respiração consciente.
+        Aqui você encontra um espaço acolhedor para buscar paz, bem-estar e equilíbrio em meio à rotina agitada.
+      </p>
+      <p class="hero-subtitle">
+        Junte-se a mim e vamos caminhar juntos na sua jornada de transformação.
+      </p>
+      <div class="hero-actions">
+        <a href="#planos" class="btn btn-primary">Ver planos</a>
+        <a href="#contato" class="btn btn-outline-white">Agendar uma aula</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- SOBRE -->
   <section id="sobre" class="section">
@@ -84,18 +83,43 @@
       </div>
 
       <div class="sobre-card">
-        <h3>Quem sou eu</h3>
-        <p>
-          Sou <strong>Susy Santos</strong>, instrutora de Yoga, Meditação e Respiração consciente.
-          Acredito que, através de práticas simples e consistentes, podemos trazer mais presença,
-          leveza e equilíbrio para o dia a dia.
-        </p>
-        <p>
-          Vamos trilhar esse caminho juntas(os)?
-        </p>
-      </div>
+    <h3>Quem sou eu</h3>
+    
+    <img src="https://res.cloudinary.com/dqn2v9mtu/image/upload/v1768040877/aprender_yoga_em_casa_d19vtf.jpg" alt="Foto de perfil de Susy Santos" class="foto-perfil">
+    <p>
+        Sou <strong>Susy Santos</strong>, instrutora de Yoga, Meditação e Respiração consciente.
+        Acredito que, através de práticas simples e consistentes, podemos trazer mais presença,
+        leveza e equilíbrio para o dia a dia.
+    </p>
+    <p>
+        Vamos trilhar esse caminho juntas(os)?
+    </p>
+</div>
     </div>
   </section>
+
+  <!-- CARROSSEL -->
+  <section class="gallery-section">
+    <div class="container">
+        <div class="section-heading">
+            <h2>Vivências Pranavida</h2>
+            <p>Momentos de conexão, presença e equilíbrio</p>
+        </div>
+    </div>
+
+    <div class="infinite-scroll-wrapper">
+        <div class="infinite-scroll">
+            <div class="scroll-container original">
+                <img src="https://res.cloudinary.com/dqn2v9mtu/image/upload/v1768042667/Sem_T%C3%ADtulo_jrmsh9.png" alt="Prática de Yoga 1" class="gallery-image">
+                <img src="https://res.cloudinary.com/dqn2v9mtu/image/upload/v1768040878/quero_aprender_posicoes_yoga_jralkl.jpg" alt="Prática de Yoga 2" class="gallery-image">
+                <img src="https://res.cloudinary.com/dqn2v9mtu/image/upload/v1768040878/quero_aprender_yoga_qvljbq.jpg" alt="Prática de Yoga 3" class="gallery-image">
+                <img src="https://res.cloudinary.com/dqn2v9mtu/image/upload/v1768040878/quero_yoga_online_kzyimu.jpg" alt="Prática de Yoga 4" class="gallery-image">
+                <img src="https://res.cloudinary.com/dqn2v9mtu/image/upload/v1768040877/yoga_em_lisboa_hqqqos.jpg" alt="Prática de Yoga 5" class="gallery-image">
+                <img src="https://res.cloudinary.com/dqn2v9mtu/image/upload/v1768040877/quero_aprender_posi%C3%A7oes_de_yoga_snrt8x.jpg" alt="Prática de Yoga 6" class="gallery-image">
+                </div>
+        </div>
+    </div>
+</section>
 
   <!-- MODALIDADES -->
   <section id="modalidades" class="section section-alt">
@@ -251,5 +275,76 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const scrollContainer = document.querySelector('.infinite-scroll');
+    const scrollContent = document.querySelector('.scroll-container');
+    
+    // Clonar para efeito infinito
+    const clone = scrollContent.cloneNode(true);
+    scrollContainer.appendChild(clone);
+    
+    const scrollContentWidth = scrollContent.scrollWidth;
+    
+    const infiniteScroll = gsap.timeline({
+        repeat: -1,
+        defaults: { ease: 'none' }
+    });
+
+    // Velocidade: maior o número (50), mais lento o movimento
+    infiniteScroll.to(scrollContainer, {
+        x: `-=${scrollContentWidth + 20}`, // +20 por causa do gap
+        duration: 30, 
+        ease: 'none'
+    });
+
+    // Controle de mouse e toque (simplificado para melhor performance)
+    let isDragging = false;
+    let startX, lastX;
+
+    scrollContainer.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        startX = e.clientX;
+        gsap.to(infiniteScroll, { timeScale: 0, duration: 0.2 });
+    });
+
+    window.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        const deltaX = e.clientX - startX;
+        gsap.set(scrollContainer, { x: `+=${deltaX}` });
+        startX = e.clientX;
+    });
+
+    window.addEventListener('mouseup', () => {
+        if (!isDragging) return;
+        isDragging = false;
+        gsap.to(infiniteScroll, { timeScale: 1, duration: 0.5 });
+    });
+    
+    // Suporte para Touch (Celular)
+    scrollContainer.addEventListener('touchstart', (e) => {
+        isDragging = true;
+        startX = e.touches[0].clientX;
+        infiniteScroll.pause();
+    });
+
+    scrollContainer.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        const deltaX = e.touches[0].clientX - startX;
+        gsap.set(scrollContainer, { x: `+=${deltaX}` });
+        startX = e.touches[0].clientX;
+    });
+
+    scrollContainer.addEventListener('touchend', () => {
+        isDragging = false;
+        infiniteScroll.play();
+    });
+});
+</script>
 </body>
 </html>
